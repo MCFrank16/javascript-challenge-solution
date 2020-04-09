@@ -13,6 +13,6 @@ function sumAll(arr) {
         sum += i;
     }
     return sum;
-}
+}§
 
 sumAll([1, 4]);
