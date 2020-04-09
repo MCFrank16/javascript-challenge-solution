@@ -7,3 +7,4 @@ function spinalCase(str) {
 }
 
 spinalCase('ThisIsSpinalTap');
+
