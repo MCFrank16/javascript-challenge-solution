@@ -1,7 +1,12 @@
 // Complete the birthday function below.
 function birthday(s, d, m) {
- 
- 
+    let portions = 0;
+    for(let i = 0; i < s.length; i++){
+        if(s.slice(i, m++).reduce((tot,val) => tot + val, 0) === d){
+            portions++;
+        };
+    } 
+    return portions;
 
 }
 
