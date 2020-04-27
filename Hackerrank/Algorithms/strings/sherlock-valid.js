@@ -30,10 +30,16 @@ function isValid(s) {
     }
 
     let result = '';
-    
-    (highestOcc - 1 != lessOcc || (lessCount > 1 && highCount > 1)) ? result = 'NO' : result = 'YES';
 
-    console.log(result);
+    if(counter.length == 1) {
+      result = 'YES';
+    } else if((highestOcc - 1 == lessOcc && (highCount == 1 || lessCount == 1)) || (highestOcc == lessOcc && highCount == lessCount) || (highCount > 1 && lessCount < 2)){
+      result = 'YES';
+    } else {
+      result = 'NO';
+    }
+        
+    return result;
 
 }
 
