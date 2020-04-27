@@ -20,6 +20,7 @@ function pickingNumbers(a) {
            max = map[i] + map[i - 1];
        }
    }
+   console.log(map);
    return max;
 }
 
