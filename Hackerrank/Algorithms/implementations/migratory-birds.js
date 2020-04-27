@@ -8,7 +8,7 @@ function migratoryBirds(arr) {
         occurences[arr[i]]++;
     }
     let highest = Math.max(...occurences);
-
+    console.log(occurences);
     console.log(occurences.indexOf(highest));
 
 }
