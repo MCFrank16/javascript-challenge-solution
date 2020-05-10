@@ -18,7 +18,7 @@ function maxSumArr(arr, n){
       maxSum = Math.max(tempSum, maxSum);
   }
 
-  return maxSum;
+  return (arr.length < n) ? null : maxSum;
 }
 
 console.log(maxSumArr([2,6,9,2,1,8,5,6,3], 3))
