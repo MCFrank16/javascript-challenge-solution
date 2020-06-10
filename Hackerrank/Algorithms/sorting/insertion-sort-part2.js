@@ -12,5 +12,6 @@ function insertionSort(arr){
     }
 }
 
+
 insertionSort([1, 4, 3, 5, 6, 2])
 
