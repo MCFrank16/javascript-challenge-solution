@@ -1,8 +1,25 @@
 function updateInventory(arr1, arr2) {
-    // All inventory must be accounted for or you're fired!
-    for(let i = 0; i < arr2.length; i++){
-        console.log(arr2[i]);
-    }
+    // // All inventory must be accounted for or you're fired!
+    // let inventory = Array.prototype.concat.apply([], arr1);
+
+    // for(let i = 0; i < arr2.length; i++){
+    //     const item = arr2[i][1];
+    //     const quantity = arr2[i][0];
+
+    //     const position = inventory.indexOf(item);
+
+    //     // if(position !== -1){
+
+    //     // }
+
+    //     // console.log(position);
+    // }
+    // return inventory;
+
+    let i = [[21, "Bowling Ball"]];
+    let j = [[67, "Bowling Ball"]];
+    
+    console.log([...i, ...j]);
 }
 
 // Example inventory lists
@@ -20,4 +37,4 @@ var newInv = [
     [7, "Toothpaste"]
 ];
 
-updateInventory(curInv, newInv);
+console.log(updateInventory(curInv, newInv));
