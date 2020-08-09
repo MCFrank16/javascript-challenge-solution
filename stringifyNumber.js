@@ -11,7 +11,7 @@ function stringifyNumbers(obj){
     }
     return newObj;
 }
-let obj = { 
+let obj = {
     num : 1,
     str: "stringy",
     data: {
