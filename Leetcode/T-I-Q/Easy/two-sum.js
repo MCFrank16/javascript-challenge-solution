@@ -32,27 +32,24 @@
 // optimized solution with hashmap which is fast compared to the brute force
 // searching through a hash map is of a constant time O(1).
 
-var twoSum = function(nums, target){
-   let hash = {};
+function twoSum (arr, target){
+    let hash = {};
+    let i = 0;
 
-   for(let i = 0; i < nums.length; i++){
-       let currentNumber = nums[i];
+    while (i < arr.length){
+        let currNum = arr[i];
+        let required = target - currNum;
 
-       let requiredNumber = target - currentNumber;
-       
-       // do we have the required number in the hash table
-       const requiredNumberIdx = hash[requiredNumber];
-       
-       // if we have it return it alongside the current index
-       // else send the current number's index to the hash table
-       // and repeat the process.
-       if(requiredNumberIdx !== undefined){
-           return [requiredNumberIdx, i];
-       } else {
-           hash[currentNumber] = i;
-       }
-   }
-   return 'not found';
+        let requiredIdx = hash[required];
+
+        if(requiredIdx !== undefined){
+            return [requiredIdx, i];
+        } else {
+            hash[currNum] = i;
+        }
+        i++;
+    }
+    return 'Not Found';
 }
 
-console.log(twoSum([2, 9, 11, 15], 9));
+console.log(twoSum([2, 7, 11, 15], 9));
