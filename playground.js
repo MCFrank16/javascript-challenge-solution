@@ -18,8 +18,6 @@ function power(b, e){
     return b * power(b, e - 1);
 }
 
-console.log(power(2,40))
-
 // // frank ===> knarf
 // // function reverse(str){
 // //   let newStr = '';
@@ -76,12 +74,11 @@ function isPrime(n){
 function permutation(str){
     if(str.length <= 2) return str.length === 2 ? [str, str[1] + str[0]] : [str];
     return str.split('').reduce((acc, letter, i) => 
-        acc.concat(permutation(str.slice(0, i) + str.slice(i + 1)).map(val => letter + val)), 
-        []
+        acc.concat(permutation(str.slice(0, i) + str.slice(i + 1)).map(val => letter + val)), []
     )
 }
 
-console.log(permutation("abc"));
+// console.log(permutation("Tact Coa"));
 
 // function div(a,b){
 //     let count = 0;
@@ -95,3 +92,21 @@ console.log(permutation("abc"));
 // }
 
 // console.log(div(5, 2));
+
+var moveZeroes = function(nums) {
+    
+    let count = 0;
+    nums.forEach(el => {
+        if(nums[el] !== 0){
+            nums[count] = nums[el];
+            count++;
+        }
+    });
+
+    for(let i = count; i < nums.length; i++){
+        nums[i] = 0;
+    }
+    return nums;
+};
+
+console.log(moveZeroes([0,0,1,7]))
